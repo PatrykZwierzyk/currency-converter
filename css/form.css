@@ -1,0 +1,37 @@
+.form {
+    color: rgb(221, 16, 16);
+} 
+
+.form__labelText {
+    width: 100px;
+    max-width: 150px;
+    display: inline-block;
+}
+
+.form__button {
+    width: 100%;
+    background-color: hsl(180, 100%, 20%);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.form__button:hover {
+    background-color: hsl(180, 100%, 30%);
+}
+
+.form__button:active {
+    background-color: hsl(180, 100%, 40%);
+}
+
+.form__fieldset {
+   margin-top: 40px;
+}
+
+.form__legend {
+    background-color: hsl(180, 100%, 20%);
+    color: white;
+    padding: 10px;
+}
