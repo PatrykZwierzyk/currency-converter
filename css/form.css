@@ -1,7 +1,7 @@
 .form {
     width: 800px;
     height: 600px;
-    color: rgb(221, 16, 16);
+    color: rgb(0, 0, 0);
 }
 
 .form__labelText {
@@ -12,7 +12,7 @@
 
 .form__button {
     width: 100%;
-    background-color: hsl(180, 100%, 20%);
+    background-color: hsl(242.48deg 100% 20%);
     color: white;
     padding: 5px;
     border-radius: 5px;
@@ -33,7 +33,7 @@
 }
 
 .form__legend {
-    background-color: hsl(180, 100%, 20%);
-    color: white;
+    background-color:hsl(242.48deg 100% 20%) ;
+    color: rgb(255, 255, 255);
     padding: 10px;
 }
