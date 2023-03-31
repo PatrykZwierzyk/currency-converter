@@ -1,6 +1,8 @@
 .form {
+    width: 800px;
+    height: 600px;
     color: rgb(221, 16, 16);
-} 
+}
 
 .form__labelText {
     width: 100px;
@@ -27,7 +29,7 @@
 }
 
 .form__fieldset {
-   margin-top: 40px;
+    margin-top: 40px;
 }
 
 .form__legend {
