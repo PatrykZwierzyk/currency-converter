@@ -1,37 +1,55 @@
-console.log("Witam")
+{
+    const welcome = () => {
+        console.log("Witajcie");
+    };
+    welcome();
 
-let formElement = document.querySelector(".js-form");
-let amountElement = document.querySelector(".js-amount");
-let currencyElement = document.querySelector(".js-currency");
-let resultElement = document.querySelector(".js-result");
+    const calculateResult = (amount, currency) => {
 
-let EUR = 4.78;
-let USD = 4.47;
-let GBP = 5.37;
+        const EUR = 4.78;
+        const USD = 4.47;
+        const GBP = 5.37;
 
-formElement.addEventListener("submit", (event) => {
-    event.preventDefault();
+        switch (currency) {
+            case "EUR":
+                return amount / EUR;
 
-let amount = +amountElement.value;
-let currency = currencyElement.value;
+            case "USD":
+                return amount / USD;
 
-let result;
+            case "GBP":
+                return amount / GBP;
+        }
+    };
 
-switch (currency) {
+    const updateResultText = (result, currency) => {
+        const resultElement = document.querySelector(".js-result");
 
-    case "EUR":
-        result = amount / EUR;
-        break;
+        resultElement.innerText = (`${result.toFixed(2)} ${currency}`);
+    };
 
-    case "USD":
-        result = amount / USD;
-        break;
+    const onFormSubmit = (event) => {
+        event.preventDefault();
 
-    case "GBP":
-        result = amount / GBP;
-        break;
+        const amountElement = document.querySelector(".js-amount");
+        const currencyElement = document.querySelector(".js-currency");
+        const resultElement = document.querySelector(".js-result");
+
+        const amount = +amountElement.value;
+        const currency = currencyElement.value;
+
+        const result = calculateResult(amount, currency);
+
+        updateResultText(result, currency);
+
+    };
+
+const init = () => {
+    const formElement = document.querySelector(".js-form");
+
+    formElement.addEventListener("submit", onFormSubmit);
+};
+
+init();
+
 }
-
-resultElement.innerText = (`${result.toFixed(2)} ${currency}`);
-   
-});
