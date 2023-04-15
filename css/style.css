@@ -7,7 +7,7 @@ html {
 }
 
 .container {
-    background-image: url("../images/backgroundimage.png");
+    background-image: url("../images/background-image.jpg");
     display: flex;
     align-items: center;
     justify-content: center;
